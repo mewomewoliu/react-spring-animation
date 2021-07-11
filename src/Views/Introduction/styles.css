@@ -1,0 +1,272 @@
+/* Autor @andersondcribeiro 
+www.estudiooca.com.br
+
+Recursos externos
+
+-https://webgradients.com
+-Google Fonts
+-kit.fontawesome
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  position: relative;
+  /* 
+  align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  /* background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%); */
+}
+
+/* Background botoes, imagem e icones*/
+.card-perfil {
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  width: 450px;
+  height: 450px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2em;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  background-clip: padding-box;
+}
+.card-perfil .area-img {
+  background: rgba(134, 0, 0, 0.1);
+}
+.card-perfil .icon {
+  font-size: 20px;
+  color: #31344b;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.7;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+.card-perfil .icon i {
+  position: relative;
+  z-index: 9;
+}
+/* .card-perfil .icon.arrow {
+  left: 15px;
+}
+.card-perfil .icon.dots {
+  right: 15px;
+} */
+.card-perfil .area-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Área da foto de perfil */
+.area-img .area-interna {
+  height: calc(100% - 25px);
+  width: calc(100% - 25px);
+  border-radius: 50%;
+}
+.area-interna img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* dados do perfil e icones */
+.card-perfil .nome {
+  font-size: 23px;
+  font-weight: 500;
+  color: #3e4fce;
+  margin: 10px 0 5px 0;
+}
+.card-perfil .sobre {
+  color: #31344b;
+  font-weight: 400;
+  font-size: 16px;
+}
+.card-perfil .icones-red-social {
+  margin: 15px 0 25px 0;
+}
+.icones-red-social a {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Efeito mouse hover*/
+.icones-red-social a:hover::before,
+.card-perfil .icon:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+}
+
+.botoes button {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.botoes button:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+}
+
+.botoes button:hover:before {
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.icones-red-social a i {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.icones-red-social a.github i {
+  color: #000;
+}
+.icones-red-social a.twitter i {
+  color: #791df2;
+}
+.icones-red-social a.tiktok i {
+  color: #000;
+}
+.icones-red-social a.behance i {
+  color: #0057ff;
+}
+
+.icones-red-social a.linkedin i {
+  color: #0a66c2;
+}
+
+/* Espaçamento entre os botões*/
+
+.card-perfil .botoes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* texto do botão*/
+.botoes button {
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  color: #31344b;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+/* Espaços entre os botões*/
+.botoes button:first-child {
+  margin-right: 10px;
+}
+.botoes button:last-child {
+  margin-left: 10px;
+}
+.card-perfil .compartilhamento {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+.compartilhamento .row {
+  color: #31344b;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* separadores da área de compartilhamento*/
+.compartilhamento .row::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: -25px;
+}
+.row:first-child::before {
+  background: none;
+}
+
+/* efeito hover icones compartilhamento*/
+.compartilhamento .row i.icon-2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  color: #31344b;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.row:nth-child(1):hover i.fa-heart,
+.row:nth-child(2):hover i.fa-comment {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.grid-container {
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+
+  justify-content: center;
+}
+.grid-item {
+  top: 50%;
+  background-color: rgb(83, 2, 2);
+  top: 80px;
+}
+.intro-grid-container {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.h1 {
+  position: absolute;
+  font-size: 44px;
+  z-index: 10;
+}
